@@ -83,6 +83,7 @@ int handle_connection(int sock) {
     while((n = minet_read(connection_socket, buf, BUFSIZE)) > 0){    /* first read loop -- get request and headers*/
       printf("receiving from client.");
       puts(buf);
+      printf(buf);
     }
     char fileName[strlen(buf)-12];
     memcpy( fileName, &buf[4], strlen(buf)-13);
